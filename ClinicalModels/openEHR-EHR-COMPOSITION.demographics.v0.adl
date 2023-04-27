@@ -1,0 +1,56 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.demographics.v0
+
+concept
+	[at0000]	-- Demographics
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"8FB2122083237D4C46495E26A90A0340">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Demographics
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		content cardinality matches {0..*; unordered} matches {
+			allow_archetype ADMIN_ENTRY[at0001] occurrences matches {0..*} matches {	-- Demographics
+				include
+					archetype_id/value matches {/openEHR-EHR-ADMIN_ENTRY\.demographics(-[a-zA-Z0-9_]+)*\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Demographics">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Demographics">
+					description = <"*">
+				>
+			>
+		>
+	>

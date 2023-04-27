@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
+  <id>d851afaa-5c63-4e92-9145-7182285367e5</id>
+  <name>Vital signs monitoring</name>
+  <description>
+    <lifecycle_state>Initial</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>MetaDataSet:Sample Set </key>
+        <value>Template metadata sample set </value>
+      </item>
+      <item>
+        <key>Acknowledgements</key>
+        <value />
+      </item>
+      <item>
+        <key>Business Process Level</key>
+        <value />
+      </item>
+      <item>
+        <key>Care setting</key>
+        <value />
+      </item>
+      <item>
+        <key>Client group</key>
+        <value />
+      </item>
+      <item>
+        <key>Clinical Record Element</key>
+        <value />
+      </item>
+      <item>
+        <key>Copyright</key>
+        <value />
+      </item>
+      <item>
+        <key>Issues</key>
+        <value />
+      </item>
+      <item>
+        <key>Owner</key>
+        <value />
+      </item>
+      <item>
+        <key>Sign off</key>
+        <value />
+      </item>
+      <item>
+        <key>Speciality</key>
+        <value />
+      </item>
+      <item>
+        <key>User roles</key>
+        <value />
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.vital_signs_monitoring.v0" concept_name="Vital signs monitoring">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.height.v2" concept_name="Рост/длина тела" path="/content[at0001]">
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0018]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0013]/items[at0014]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0013]/items[at0019]" max="0" />
+      <Rule path="/data[at0001]/events[at0021]" max="0" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.body_weight.v2" concept_name="Масса тела" path="/content[at0002]">
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0024]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0008]/items[at0009]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0008]/items[at0025]" max="0" />
+      <Rule path="/data[at0002]/events[at0026]" max="0" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.haircolor.v0" concept_name="Haircolor" path="/content[at0005]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.eyecolor.v0" concept_name="Eyecolor" path="/content[at0006]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.skintone.v0" concept_name="Skintone" path="/content[at0008]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.freckles.v0" concept_name="Freckles" path="/content[at0009]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.doestheskinturnredwhensunburned.v0" concept_name="Doestheskinturnredwhensunburned" path="/content[at0011]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.doestheskintaninthesun.v0" concept_name="Doestheskintaninthesun" path="/content[at0012]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.howoftendoyouhavevacationinthesouth.v0" concept_name="Howoftendoyouhavevacationinthesouth" path="/content[at0013]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.doyouusesunscreeninsummer.v0" concept_name="Doyouusesunscreeninsummer" path="/content[at0014]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.sport.v0" concept_name="Sport" path="/content[at0015]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.doyouhaveahistoryofpsoriasis.v0" concept_name="Doyouhaveahistoryofpsoriasis" path="/content[at0017]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.whendidthelesionappear.v0" concept_name="Whendidthelesionappear" path="/content[at0018]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.sizex.v0" concept_name="Sizex" path="/content[at0019]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.sizey.v0" concept_name="Sizey" path="/content[at0020]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.elementarea.v0" concept_name="Elementarea" path="/content[at0021]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.elementborders.v0" concept_name="Elementborders" path="/content[at0022]" />
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.dominantcolor.v0" concept_name="Dominantcolor" path="/content[at0023]" />
+    <Context />
+  </definition>
+</template>

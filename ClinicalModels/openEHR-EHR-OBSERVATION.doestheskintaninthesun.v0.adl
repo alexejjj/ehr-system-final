@@ -1,0 +1,105 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.doestheskintaninthesun.v0
+
+concept
+	[at0000]	-- Doestheskintaninthesun
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"F4969053DAD48865F8AFC029BF8C3808">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Doestheskintaninthesun
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- Speed of Tanning
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005, 	-- burns quickly and intensely
+													at0006, 	-- moderate burn
+													at0007, 	-- burns sometimes
+													at0008, 	-- rarely burns
+													at0009]	-- does not burn
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Doestheskintaninthesun">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Speed of Tanning">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"burns quickly and intensely">
+					description = <"burns quickly and intensely">
+				>
+				["at0006"] = <
+					text = <"moderate burn">
+					description = <"moderate burn">
+				>
+				["at0007"] = <
+					text = <"burns sometimes">
+					description = <"burns sometimes">
+				>
+				["at0008"] = <
+					text = <"rarely burns">
+					description = <"rarely burns">
+				>
+				["at0009"] = <
+					text = <"does not burn">
+					description = <"does not burn">
+				>
+			>
+		>
+	>

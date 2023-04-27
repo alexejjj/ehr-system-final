@@ -1,0 +1,90 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.doyouusesunscreeninsummer.v0
+
+concept
+	[at0000]	-- Doyouusesunscreeninsummer
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"E14A25F81E84D054640D25948380994B">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Doyouusesunscreeninsummer
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Sunscreen protection
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0006, 	-- yes
+													at0007]	-- no
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Doyouusesunscreeninsummer">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Sunscreen protection">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"yes">
+					description = <"yes">
+				>
+				["at0007"] = <
+					text = <"no">
+					description = <"no">
+				>
+			>
+		>
+	>

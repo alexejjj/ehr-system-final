@@ -1,0 +1,203 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-COMPOSITION.vital_signs_monitoring.v0
+
+concept
+	[at0000]	-- Vital signs monitoring
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"CBDF2D27BBB7D23A49F68433BC566C4A">
+	>
+
+definition
+	COMPOSITION[at0000] matches {	-- Vital signs monitoring
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {[openehr::433]}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE[at0003] matches {*}
+				}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0001] occurrences matches {0..*} matches {	-- Height
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.height\.v2/}
+			}
+			allow_archetype OBSERVATION[at0002] occurrences matches {0..*} matches {	-- Weight
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_weight\.v2/}
+			}
+			allow_archetype OBSERVATION[at0005] occurrences matches {0..*} matches {	-- hairColor
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.haircolor\.v0/}
+			}
+			allow_archetype OBSERVATION[at0006] occurrences matches {0..*} matches {	-- eyeColor
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.eyecolor\.v0/}
+			}
+			allow_archetype OBSERVATION[at0008] occurrences matches {0..*} matches {	-- skinTone
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.skintone\.v0/}
+			}
+			allow_archetype OBSERVATION[at0009] occurrences matches {0..*} matches {	-- freckles
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.freckles\.v0/}
+			}
+			allow_archetype OBSERVATION[at0011] occurrences matches {0..*} matches {	-- doesTheSkinTurnRedWhenSunburned
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.doestheskinturnredwhensunburned\.v0/}
+			}
+			allow_archetype OBSERVATION[at0012] occurrences matches {0..*} matches {	-- doesTheSkinTanInTheSun
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.doestheskintaninthesun\.v0/}
+			}
+			allow_archetype OBSERVATION[at0013] occurrences matches {0..*} matches {	-- howOftenDoYouHaveVacationInTheSouth
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.howoftendoyouhavevacationinthesouth\.v0/}
+			}
+			allow_archetype OBSERVATION[at0014] occurrences matches {0..*} matches {	-- doYouUseSunscreenInSumme
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.doyouusesunscreeninsummer\.v0/}
+			}
+			allow_archetype OBSERVATION[at0015] occurrences matches {0..*} matches {	-- sport
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.sport\.v0/}
+			}
+			allow_archetype OBSERVATION[at0017] occurrences matches {0..*} matches {	-- doYouHaveAHistoryOfPsoriasis
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.doyouhaveahistoryofpsoriasis\.v0/}
+			}
+			allow_archetype OBSERVATION[at0018] occurrences matches {0..*} matches {	-- whenDidTheLesionAppear
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.whendidthelesionappear\.v0/}
+			}
+			allow_archetype OBSERVATION[at0019] occurrences matches {0..*} matches {	-- heightX
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.sizex\.v0/}
+			}
+			allow_archetype OBSERVATION[at0020] occurrences matches {0..*} matches {	-- sizeY
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.sizey\.v0/}
+			}
+			allow_archetype OBSERVATION[at0021] occurrences matches {0..*} matches {	-- area
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.elementarea\.v0/}
+			}
+			allow_archetype OBSERVATION[at0022] occurrences matches {0..*} matches {	-- borders
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.elementborders\.v0/}
+			}
+			allow_archetype OBSERVATION[at0023] occurrences matches {0..*} matches {	-- dominantColor
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.dominantcolor\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Vital signs monitoring">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Height">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Weight">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"hairColor">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"eyeColor">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"skinTone">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"freckles">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"doesTheSkinTurnRedWhenSunburned">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"doesTheSkinTanInTheSun">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"howOftenDoYouHaveVacationInTheSouth">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"doYouUseSunscreenInSumme">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"sport">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"doYouHaveAHistoryOfPsoriasis">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"whenDidTheLesionAppear">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"heightX">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"sizeY">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"area">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"borders">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"dominantColor">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,135 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.location.v0
+
+concept
+	[at0000]	-- Location
+language
+	original_language = <[ISO_639-1::ru]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"F787B913ADF178EDCFFB1011A7A9028B">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Location
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Любое событие
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Дерево
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {	-- Element location
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0006, 	-- scalp
+													at0007, 	-- face
+													at0008, 	-- neck
+													at0009, 	-- decolete
+													at0010, 	-- shoulder
+													at0011, 	-- forearm
+													at0012, 	-- hand
+													at0013, 	-- lower body
+													at0014, 	-- thigh
+													at0015, 	-- calf
+													at0016]	-- foot
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"Location">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Любое событие">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Дерево">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Element location">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"scalp">
+					description = <"scalp">
+				>
+				["at0007"] = <
+					text = <"face">
+					description = <"face">
+				>
+				["at0008"] = <
+					text = <"neck">
+					description = <"neck">
+				>
+				["at0009"] = <
+					text = <"decolete">
+					description = <"decolete">
+				>
+				["at0010"] = <
+					text = <"shoulder">
+					description = <"shoulder">
+				>
+				["at0011"] = <
+					text = <"forearm">
+					description = <"forearm">
+				>
+				["at0012"] = <
+					text = <"hand">
+					description = <"hand">
+				>
+				["at0013"] = <
+					text = <"lower body">
+					description = <"lower body">
+				>
+				["at0014"] = <
+					text = <"thigh">
+					description = <"thigh">
+				>
+				["at0015"] = <
+					text = <"calf">
+					description = <"calf">
+				>
+				["at0016"] = <
+					text = <"foot">
+					description = <"foot">
+				>
+			>
+		>
+	>
